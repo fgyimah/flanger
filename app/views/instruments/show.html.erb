@@ -62,12 +62,17 @@
       <div class="bg-white pa4 border-radius-3">
         <h4 class="title is-5 has-text-centered"><%= number_to_currency(@instrument.price) %></h4>
         <p class="has-text-centered mb4">Sold by <%= @instrument.user.name %></p>
-        <%= button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'button is-warning add-to-cart' %>
+        <%
+=begin%>
+ <%= button_to 'Add to cart', line_items_path(instrument_id: @instrument), class: 'button is-warning add-to-cart' %> 
+<%
+=end%>
       </div>
     </div>
   </div>
 
   <% if instrument_author(@instrument) %>
-    <%= link_to 'Edit', edit_instrument_path(@instrument), class: 'button' %>
-  <% end %>
+    <%= link_to 'Edit', edit_instrument_path(@instrument), class: 'button is-info is-small' %>
+    <%= link_to 'Delete', @instrument, method: :delete, data: {confirm: "Are you sure you want to delete this instrument"}, class: 'button is-danger is-small'%>
+  <% end %> 
 </section>

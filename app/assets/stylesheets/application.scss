@@ -13,3 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import "bulma";
+
+@media (max-width: 768px) {
+  .nav-item {
+    display: block !important;
+    margin-left: 40px !important;
+  }
+}

@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.5'
 
 gem 'rails', '~> 5.2.3'
-gem 'sqlite3'
+gem 'pg', '~> 1.1', '>= 1.1.4'
 gem 'puma', '~> 3.11'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -22,6 +22,8 @@ gem 'gravatar_image_tag', '~> 1.2'
 gem 'bulma-rails', '~> 0.7.5'
 gem 'carrierwave', '~> 1.3', '>= 1.3.1'
 gem 'mini_magick', '~> 4.9', '>= 4.9.4'
+gem 'jquery-rails'
+gem 'bulmajs-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

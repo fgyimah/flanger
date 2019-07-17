@@ -1,6 +1,7 @@
 class Instrument < ApplicationRecord
     mount_uploader :image, ImageUploader
     belongs_to :user, optional: true
+    has_many :line_items
 
     validates :title, :brand, :price, :model, presence: true
     validates :description, length: {maximum: 1000, too_long: "%{count} characters is the maximum allowed"} 

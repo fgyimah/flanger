@@ -27,7 +27,7 @@ gem 'bulmajs-rails'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'better_errors', '~> 2.5', '>= 2.5.1'
+  gem 'better_errors', '~> 2.8'
   gem 'guard', '~> 2.15'
   gem 'guard-livereload', '~> 2.5', '>= 2.5.2'
 end
